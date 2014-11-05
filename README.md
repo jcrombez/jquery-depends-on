@@ -8,7 +8,7 @@ This plugin has first been created to handle form field but should works with an
 
 How to use :
 
-``javascript
+```javascript
     $('#myField').dependsOn({
         'elementToToggle': $('#parentToHide') // optional, if what you want to hide is not the field itself
         'dependencies' : [
