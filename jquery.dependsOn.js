@@ -9,17 +9,15 @@
 			var elementToToggle = parameters.elementToToggle ? parameters.elementToToggle : dependingElement;
 
 			dependingElement.bind('dependency-update', function () {
-				var required = $(this).attr('required') == true;
+				var required = $(this).attr('required') == 'required';
 
 				if (checkDependencies(parameters.dependencies)) {
-					console.log($(this).attr('id') + ' show');
 					elementToToggle.slideDown();
 
 					if (required) {
 						dependingElement.attr('required', 'required');
 					}
 				} else {
-					console.log($(this).attr('id') + ' hide');
 					elementToToggle.slideUp();
 
 					if (required) {
