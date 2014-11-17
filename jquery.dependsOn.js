@@ -7,9 +7,10 @@
 		this.each(function () {
 			var dependingElement = $(this);
 			var elementToToggle = parameters.elementToToggle ? parameters.elementToToggle : dependingElement;
+			dependingElement.data('wasRequired', dependingElement.attr('required') == 'required');
 
 			dependingElement.bind('dependency-update', function () {
-				var required = $(this).attr('required') == 'required';
+				var required = dependingElement.data('wasRequired');
 
 				if (checkDependencies(parameters.dependencies)) {
 					elementToToggle.slideDown();
