@@ -10,7 +10,7 @@ How to use :
 
 ```javascript
     $('#myField').dependsOn({
-        'elementToToggle': $('#parentToHide') // optional, if what you want to hide is not the field itself
+        'elementToToggle': $('#parentToHide'), // optional, if what you want to hide is not the field itself
         'dependencies' : [
             {
                 'element': $('input[name="firstField"]'),
